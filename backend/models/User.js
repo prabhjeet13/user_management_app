@@ -22,7 +22,6 @@ const userSchema = new mongoose.Schema({
   hobbies: [{
     type: String,
     required: true,
-    unique: true, 
   }],
 }
 );

@@ -1,18 +1,17 @@
 const express = require('express');
 const router = express.Router();
-// const {add, deleteUser,edit,getAllusers,getUserById} = require('../Controllers/User');
+const {add, deleteUser,edit,getAllusers,add_hobby,delete_hobby} = require('../controllers/User');
 
 
-// router.post('/add',auth,isAdmin,add);
+router.post('/adduser',add);
 
-// router.post('/edit',auth,isAdmin,edit);
+router.post('/edituser/:id',edit);
 
-// router.post('/delete',auth,isAdmin,deleteUser);
+router.delete('/deleteuser/:id',deleteUser);
 
-// router.post('/getuser',getUserById);
+router.get('/getallusers',getAllusers);
 
-// router.get('/getallusers',getAllusers);
-
-
+router.post('/add_hobby/:id',add_hobby);
+router.post('/delete_hobby/:id',delete_hobby);
 
 module.exports = router;
