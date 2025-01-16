@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 const cors = require('cors');
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: "https://user-management-app-eight-pi.vercel.app",
         credentials: true,
     })
 )
