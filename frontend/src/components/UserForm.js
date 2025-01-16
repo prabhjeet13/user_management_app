@@ -72,7 +72,7 @@ const UserForm = () => {
          // database calling
          const toastid = toast.loading('wait .... ');
          try {
-           const response = await axios.post(`http://localhost:4001/api/v1/users/edituser/${formData.id}`,formData);
+           const response = await axios.post(`https://user-management-app-06rt.onrender.com/api/v1/users/edituser/${formData.id}`,formData);
            if(!response.data.success)
            {
               throw new Error('not able to do');
@@ -101,7 +101,7 @@ const UserForm = () => {
     
     const toastid = toast.loading('wait .... ');
     try {
-      const response = await axios.post('http://localhost:4001/api/v1/users/adduser',formData);
+      const response = await axios.post('https://user-management-app-06rt.onrender.com/api/v1/users/adduser',formData);
       if(!response.data.success)
       {
          throw new Error('not able to do');

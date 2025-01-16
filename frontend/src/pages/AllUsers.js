@@ -23,7 +23,7 @@ const AllUsers = () => {
     {
         const toastid = toast.loading('wait .... ');
         try {
-          const response = await axios.delete(`http://localhost:4001/api/v1/users/deleteuser/${data.id}`);
+          const response = await axios.delete(`https://user-management-app-06rt.onrender.com/api/v1/users/deleteuser/${data.id}`);
           if(!response.data.success)
           {
              throw new Error('not able to do');

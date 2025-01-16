@@ -167,7 +167,7 @@ const MainContent = () => {
 
     const toastid = toast.loading('wait .... ');
     try {
-      const response = await axios.post(`http://localhost:4001/api/v1/users/delete_hobby/${id}`,{hobby});
+      const response = await axios.post(`https://user-management-app-06rt.onrender.com/api/v1/users/delete_hobby/${id}`,{hobby});
       if(!response.data.success)
       {
          throw new Error('not able to do');
@@ -215,7 +215,7 @@ const MainContent = () => {
       //database - calling
       const toastid = toast.loading('wait .... ');
     try {
-      const response = await axios.post(`http://localhost:4001/api/v1/users/add_hobby/${id}`,{hobby});
+      const response = await axios.post(`https://user-management-app-06rt.onrender.com/api/v1/users/add_hobby/${id}`,{hobby});
       if(!response.data.success)
       {
          throw new Error('not able to do');
@@ -247,7 +247,7 @@ const MainContent = () => {
     const fetch = async () => {
       const toastId = toast.loading('Loading data...');
       try {
-        const response = await axios.get('http://localhost:4001/api/v1/users/getallusers');
+        const response = await axios.get('https://user-management-app-06rt.onrender.com/api/v1/users/getallusers');
         if (!response.data.success) {
           throw new Error('Unable to fetch users');
         } else {
